@@ -1,0 +1,17 @@
+{
+  "name": "rake-finxos-institute-miaotu",
+  "version": "1.0.0",
+  "description": "Special task institute-miaotu project.",
+  "main": "index.rake",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeiship/rake-finxos-institute-miaotu.git"
+  },
+  "keywords": ["rake", "task"],
+  "author": "afei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afeiship/rake-finxos-institute-miaotu/issues"
+  },
+  "homepage": "https://github.com/afeiship/rake-finxos-institute-miaotu#readme"
+}
