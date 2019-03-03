@@ -3,7 +3,7 @@
 
 ## install:
 ```bash
-npm i -S afeiship/rake-finxos-institute-miaotu --registry=https://registry.npm.taobao.org
+npm i -D afeiship/rake-finxos-institute-miaotu --registry=https://registry.npm.taobao.org
 ```
 
 ## usage:

@@ -1,0 +1,103 @@
+{
+	"description": "Webapck for mini program",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"miniprogramRoot": "dist/",
+	"compileType": "miniprogram",
+	"appid": "wx7a5df9538ff35b66",
+	"instituteCfg": {},
+	"projectname": "institute-miaotu",
+	"libVersion": "2.6.0",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": 0,
+					"name": "topics",
+					"pathName": "pages/topics/index",
+					"query": "tab=16",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "detail",
+					"pathName": "pages/detail/index",
+					"query": "feed_id=352",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "customers",
+					"pathName": "pages/customers/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "users",
+					"pathName": "pages/users/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "topics-detail",
+					"pathName": "pages/topics-detail/index",
+					"query": "tab=14",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "customers",
+					"pathName": "pages/customers/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "leave-message",
+					"pathName": "pages/leave-message/index",
+					"query": "feed_id=352",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "errors",
+					"pathName": "pages/errors/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "tab=subscribe",
+					"scene": null
+				}
+			]
+		}
+	}
+}
