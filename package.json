@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/afeiship/rake-finxos-institute-miaotu#readme",
   "dependencies": {
-    "rake-ali-iconfont": "github:afeiship/rake-ali-iconfont"
+    "rake-ali-iconfont": "github:afeiship/rake-ali-iconfont",
+    "rake-weapp": "github:afeiship/rake-weapp"
   }
 }
