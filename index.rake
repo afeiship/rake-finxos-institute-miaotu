@@ -17,4 +17,14 @@ namespace :app do
     # build target:
     sh "cross-env NODE_ENV=#{args[:env]} webpack -p --env.institute=#{args[:inst]} --env.theme=#{args[:theme]}"
   end
+
+  desc "Sync iconfonts."
+  task :icons, [:url] do |task, args|
+    args.with_defaults(
+      :url => "default",
+      :filename => "./src/assets/styles/icons-inst.scss",
+    )
+
+    Rake::Task["iconfont:sync_css"].invoke(args[:url], args[:filename])
+  end
 end

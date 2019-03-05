@@ -7,11 +7,17 @@
     "type": "git",
     "url": "git+https://github.com/afeiship/rake-finxos-institute-miaotu.git"
   },
-  "keywords": ["rake", "task"],
+  "keywords": [
+    "rake",
+    "task"
+  ],
   "author": "afei",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/afeiship/rake-finxos-institute-miaotu/issues"
   },
-  "homepage": "https://github.com/afeiship/rake-finxos-institute-miaotu#readme"
+  "homepage": "https://github.com/afeiship/rake-finxos-institute-miaotu#readme",
+  "dependencies": {
+    "rake-ali-iconfont": "github:afeiship/rake-ali-iconfont"
+  }
 }
