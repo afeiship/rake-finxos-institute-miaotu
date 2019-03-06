@@ -13,3 +13,12 @@ npm i -D afeiship/rake-finxos-institute-miaotu --registry=https://registry.npm.t
 $ rake -T
 rake app:build[theme,inst,env]  # Special task institute-miaotu project
 ~~~
+
+
+## todos:
+- [] add cli support;
+- [] add app:reset cmd
+
+~~~
+weapp-cli -u 0.1.21@/Users/feizheng/finxos/institute-miaotu --upload-desc '[v0.1.21][2019-03-06] MSG'
+~~~
