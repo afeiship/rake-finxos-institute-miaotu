@@ -10,12 +10,14 @@ namespace :app do
     )
 
     # update wxappid:
+    NODE_MODULES = "#{Dir.pwd}/node_modules/.bin/"
     institute_filename = "./src/config/institutes/#{args[:inst]}.json"
     institute_json_object = JSON.parse File.read(institute_filename)
     Rake::Task["weapp:appid_update"].invoke(institute_json_object["weapp"]["app_id"])
 
     # build target:
-    sh "cross-env NODE_ENV=#{args[:env]} webpack -p --env.institute=#{args[:inst]} --env.theme=#{args[:theme]}"
+    
+    sh "#{NODE_MODULES}cross-env NODE_ENV=#{args[:env]} #{NODE_MODULES}webpack -p --env.institute=#{args[:inst]} --env.theme=#{args[:theme]}"
   end
 
   desc "Sync iconfonts."
