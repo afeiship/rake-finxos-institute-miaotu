@@ -27,4 +27,14 @@ namespace :app do
 
     Rake::Task["iconfont:sync_css"].invoke(args[:url], args[:filename])
   end
+
+  desc "Reset project."
+  task :reset, [:inst] do |task, args|
+    args.with_defaults(
+      :inst => "tss_dailymeeting",
+    )
+    institute_filename = "./src/config/institutes/#{args[:inst]}.json"
+    institute_json_object = JSON.parse File.read(institute_filename)
+    Rake::Task["weapp:appid_update"].invoke(institute_json_object["weapp"]["app_id"])
+  end
 end
