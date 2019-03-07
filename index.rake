@@ -15,7 +15,7 @@ namespace :app do
     Rake::Task["weapp:appid_update"].invoke(institute_json_object["weapp"]["app_id"])
 
     # build target:
-    sh "cross-env NODE_ENV=#{args[:env]} webpack -p --env.institute=#{args[:inst]} --env.theme=#{args[:theme]}"
+    sh "NODE_ENV=#{args[:env]} webpack -p --env.institute=#{args[:inst]} --env.theme=#{args[:theme]}"
   end
 
   desc "Sync iconfonts."
