@@ -25,7 +25,7 @@ namespace :app do
   end
 
   desc "Sync iconfonts."
-  task :icons, [:url] do |task, args|
+  task :icons, [:url, :filename] do |task, args|
     args.with_defaults(
       :url => "default",
       :filename => "./src/assets/styles/icons-inst.scss",
