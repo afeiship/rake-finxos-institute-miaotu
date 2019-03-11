@@ -10,7 +10,7 @@ namespace :app do
     )
 
     # update wxappid:
-    NODE_MODULES = "#{Dir.pwd}/node_modules/.bin/"
+    NODE_BIN = "#{Dir.pwd}/node_modules/.bin"
     institute_filename = "./src/config/institutes/#{args[:inst]}.json"
     institute_json_object = JSON.parse File.read(institute_filename)
 
@@ -20,8 +20,7 @@ namespace :app do
     Rake::Task["weapp:app_tabbar_update"].invoke(theme_json_object["tabs"])
 
     # build target:
-
-    sh "#{NODE_MODULES}cross-env NODE_ENV=#{args[:env]} #{NODE_MODULES}webpack -p --env.institute=#{args[:inst]} --env.theme=#{args[:theme]}"
+    sh "#{NODE_BIN}/cross-env NODE_ENV=#{args[:env]} #{NODE_BIN}/webpack -p --env.institute=#{args[:inst]} --env.theme=#{args[:theme]}"
   end
 
   desc "Sync iconfonts."
