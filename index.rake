@@ -37,10 +37,14 @@ namespace :app do
   desc "Reset project."
   task :reset, [:inst] do |task, args|
     args.with_defaults(
+      :theme => "default",
       :inst => "tss_dailymeeting",
     )
     institute_filename = "./src/config/institutes/#{args[:inst]}.json"
     institute_json_object = JSON.parse File.read(institute_filename)
+    theme_filename = "./src/config/themes/#{args[:theme]}.json"
+    theme_json_object = JSON.parse File.read(theme_filename)
     Rake::Task["weapp:appid_update"].invoke(institute_json_object["weapp"]["app_id"])
+    Rake::Task["weapp:app_tabbar_update"].invoke(theme_json_object["tabs"])
   end
 end
