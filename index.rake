@@ -34,7 +34,7 @@ namespace :app do
   end
 
   desc "Reset project."
-  task :reset, [:inst] do |task, args|
+  task :reset, [:theme, :inst] do |task, args|
     args.with_defaults(
       :theme => "default",
       :inst => "tss_dailymeeting",
