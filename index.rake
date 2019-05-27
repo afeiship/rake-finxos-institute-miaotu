@@ -52,7 +52,7 @@ namespace :app do
   task :sync_wx_parse, [:wx_path] do |task, args|
     args.with_defaults(
       :package_path => "~/github/wx-parse/dist",
-      :local_path => "./src/components/views/wx-parse",
+      :local_path => "./src/components/views/tu-wx-parse",
     )
 
     FileUtils.rm_rf("#{args[:local_path]}/dist")
