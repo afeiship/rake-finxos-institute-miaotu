@@ -1,4 +1,5 @@
 require "json"
+require "fileutils"
 
 namespace :app do
   desc "Special task institute-miaotu project"
@@ -45,5 +46,16 @@ namespace :app do
     theme_json_object = JSON.parse File.read(theme_filename)
     Rake::Task["weapp:appid_update"].invoke(institute_json_object["weapp"]["app_id"])
     Rake::Task["weapp:app_tabbar_update"].invoke(theme_json_object["tabs"])
+  end
+
+  desc "Sync wx-parse"
+  task :sync_wx_parse, [:wx_path] do |task, args|
+    args.with_defaults(
+      :package_path => "~/github/wx-parse/dist",
+      :local_path => "./src/components/views/wx-parse",
+    )
+
+    FileUtils.rm_rf("#{args[:local_path]}/dist")
+    FileUtils.cp_r(File.expand_path(args[:package_path]), args[:local_path])
   end
 end
