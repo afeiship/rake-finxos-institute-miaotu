@@ -11,9 +11,10 @@ npm i -D afeiship/rake-finxos-institute-miaotu --registry=https://registry.npm.t
 ## usage:
 ~~~
 $ rake -T
-rake app:build[theme,inst,env]  # Special task institute-miaotu project
-rake app:icons[url,filename]    # Sync iconfonts
-rake app:reset[theme,inst]      # Reset project
+rake app:build[theme,inst,env]   # Special task institute-miaotu project
+rake app:icons[url,filename]     # Sync iconfonts
+rake app:reset[theme,inst]       # Reset project
+rake app:sync_wx_parse[wx_path]  # Sync wx-parse
 ~~~
 
 
